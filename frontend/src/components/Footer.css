@@ -1,0 +1,237 @@
+.footer {
+  padding: 66px 0 28px;
+  background: var(--color-text);
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.55fr 0.75fr 0.75fr 1.2fr;
+  gap: 44px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.footer__mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: #fff;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.footer__blurb {
+  max-width: 310px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.footer__socials a {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition);
+}
+
+.footer__socials a:hover {
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.footer__socials svg {
+  width: 17px;
+  height: 17px;
+}
+
+.footer__column h3 {
+  margin-bottom: 17px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.footer__column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer__column li,
+.footer__column a,
+.footer__column li > span {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  transition: color var(--transition);
+}
+
+.footer__column a:hover {
+  color: #fff;
+}
+
+.footer__contact a,
+.footer__contact li > span {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.footer__contact svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.footer__hours {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.34);
+  font-size: 0.72rem;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+  font-size: 0.72rem;
+}
+
+.footer__bottom p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer__legal {
+  display: flex;
+  gap: 22px;
+}
+
+.footer__legal a {
+  color: rgba(255, 255, 255, 0.46);
+  transition: color var(--transition);
+}
+
+.footer__legal a:hover {
+  color: #fff;
+}
+
+.footer__payments {
+  display: flex;
+  gap: 6px;
+}
+
+.footer__payments span {
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 980px) {
+  .footer__grid {
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
+
+  .footer__contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer__contact ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer__hours {
+    display: none;
+  }
+
+  .footer__bottom {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px 24px;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer__contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer__contact ul {
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer__legal {
+    order: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__brand,
+  .footer__contact {
+    grid-column: auto;
+  }
+}
